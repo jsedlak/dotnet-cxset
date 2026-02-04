@@ -1,4 +1,4 @@
-namespace Changeset.Models;
+namespace Cxset.Models;
 
 public enum ChangeType
 {

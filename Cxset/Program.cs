@@ -1,5 +1,5 @@
 using System.CommandLine;
-using Changeset.Commands;
+using Cxset.Commands;
 
 var rootCommand = new RootCommand("Manage versions and changelogs for .NET projects");
 

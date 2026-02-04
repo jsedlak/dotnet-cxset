@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace Changeset.Services;
+namespace Cxset.Services;
 
 public partial class CsprojService
 {

@@ -1,21 +1,27 @@
-# Changeset
+# Cxset
 
 A .NET CLI tool for managing versions and changelogs across multiple projects in a repository.
 
 ## Installation
 
+### From NuGet
+
+```bash
+dotnet tool install --global Cxset
+```
+
 ### From Source
 
 ```bash
-cd Changeset
+cd Cxset
 dotnet pack
-dotnet tool install --global --add-source ./bin/Release Changeset
+dotnet tool install --global --add-source ./bin/Release Cxset
 ```
 
 ### Uninstall
 
 ```bash
-dotnet tool uninstall --global Changeset
+dotnet tool uninstall --global Cxset
 ```
 
 ## Usage
@@ -23,7 +29,7 @@ dotnet tool uninstall --global Changeset
 ### Adding a Changeset
 
 ```bash
-changeset add
+cxset add
 ```
 
 This will:
@@ -49,7 +55,7 @@ Fixed bug Y
 ### Publishing Changesets
 
 ```bash
-changeset publish
+cxset publish
 ```
 
 This will:
@@ -98,7 +104,7 @@ For a project to be eligible for version management, it must have a `<Version>` 
 git add .
 
 # Record what changed
-changeset add
+cxset add
 # Select: 1, 2 (ProjectA and ProjectB)
 # Type: 2 (minor)
 # Description: Added user authentication
@@ -106,13 +112,13 @@ changeset add
 # Make more changes to just ProjectA
 git add .
 
-changeset add
+cxset add
 # Select: 1 (ProjectA only)
 # Type: 1 (patch)
 # Description: Fixed login bug
 
 # When ready to release
-changeset publish
+cxset publish
 # Both projects get version bump (minor wins)
 # ProjectA CHANGELOG has both entries
 # ProjectB CHANGELOG has only the first entry
@@ -121,3 +127,7 @@ changeset publish
 ## Requirements
 
 - .NET 10.0 SDK or later
+
+## License
+
+MIT

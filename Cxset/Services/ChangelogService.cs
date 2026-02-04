@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Changeset.Services;
+namespace Cxset.Services;
 
 public class ChangelogService
 {

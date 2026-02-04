@@ -1,9 +1,9 @@
 using System.CommandLine;
 using System.Text;
-using Changeset.Models;
-using Changeset.Services;
+using Cxset.Models;
+using Cxset.Services;
 
-namespace Changeset.Commands;
+namespace Cxset.Commands;
 
 public class AddCommand : Command
 {
