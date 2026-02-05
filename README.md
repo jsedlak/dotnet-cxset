@@ -29,7 +29,7 @@ dotnet tool uninstall --global Cxset
 ### Adding a Changeset
 
 ```bash
-cxset add
+dnx cxset add
 ```
 
 This will:
@@ -55,7 +55,7 @@ Fixed bug Y
 ### Publishing Changesets
 
 ```bash
-cxset publish
+dnx cxset publish
 ```
 
 This will:
@@ -104,7 +104,7 @@ For a project to be eligible for version management, it must have a `<Version>` 
 git add .
 
 # Record what changed
-cxset add
+dnx cxset add
 # Select: 1, 2 (ProjectA and ProjectB)
 # Type: 2 (minor)
 # Description: Added user authentication
@@ -112,13 +112,13 @@ cxset add
 # Make more changes to just ProjectA
 git add .
 
-cxset add
+dnx cxset add
 # Select: 1 (ProjectA only)
 # Type: 1 (patch)
 # Description: Fixed login bug
 
 # When ready to release
-cxset publish
+dnx cxset publish
 # Both projects get version bump (minor wins)
 # ProjectA CHANGELOG has both entries
 # ProjectB CHANGELOG has only the first entry
