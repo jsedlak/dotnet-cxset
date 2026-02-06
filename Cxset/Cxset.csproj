@@ -12,7 +12,7 @@
 
     <!-- Package Metadata -->
     <PackageId>Cxset</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>John Sedlak</Authors>
     <Description>A .NET CLI tool for managing versions and changelogs across multiple projects in a repository.</Description>
     <PackageProjectUrl>https://github.com/jsedlak/dotnet-changeset</PackageProjectUrl>
@@ -24,6 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.54.0" />
     <PackageReference Include="System.CommandLine" Version="2.0.2" />
   </ItemGroup>
 
