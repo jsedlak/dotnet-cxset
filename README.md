@@ -10,14 +10,6 @@ A .NET CLI tool for managing versions and changelogs across multiple projects in
 dotnet tool install --global Cxset
 ```
 
-### From Source
-
-```bash
-cd Cxset
-dotnet pack
-dotnet tool install --global --add-source ./bin/Release Cxset
-```
-
 ### Uninstall
 
 ```bash
@@ -33,6 +25,7 @@ dnx cxset add
 ```
 
 This will:
+
 1. List all eligible `.csproj` files (those with a `<Version>` element)
 2. Prompt you to select which projects are affected (comma-separated numbers or `a` for all)
 3. Ask for the change type: patch, minor, or major
@@ -48,6 +41,7 @@ projects:
   - src/MyProject/MyProject.csproj
   - src/MyLibrary/MyLibrary.csproj
 ---
+
 Added new feature X
 Fixed bug Y
 ```
@@ -59,6 +53,7 @@ dnx cxset publish
 ```
 
 This will:
+
 1. Read all pending changesets from `.changes/`
 2. Determine the version bump based on the largest change type (major > minor > patch)
 3. Bump the version (stored in `.changes/.version`, starting from `0.0.0`)
@@ -68,11 +63,11 @@ This will:
 
 ### Version Bumping
 
-| Change Type | Example |
-|-------------|---------|
-| patch | `1.2.3` → `1.2.4` |
-| minor | `1.2.3` → `1.3.0` |
-| major | `1.2.3` → `2.0.0` |
+| Change Type | Example           |
+| ----------- | ----------------- |
+| patch       | `1.2.3` → `1.2.4` |
+| minor       | `1.2.3` → `1.3.0` |
+| major       | `1.2.3` → `2.0.0` |
 
 When multiple changesets exist, the largest change type wins.
 
@@ -91,11 +86,11 @@ For a project to be eligible for version management, it must have a `<Version>` 
 
 ## Files
 
-| Path | Description |
-|------|-------------|
-| `.changes/*.md` | Pending changeset files |
-| `.changes/.version` | Current version tracker |
-| `{project}/CHANGELOG.md` | Per-project changelog |
+| Path                     | Description             |
+| ------------------------ | ----------------------- |
+| `.changes/*.md`          | Pending changeset files |
+| `.changes/.version`      | Current version tracker |
+| `{project}/CHANGELOG.md` | Per-project changelog   |
 
 ## Example Workflow
 
