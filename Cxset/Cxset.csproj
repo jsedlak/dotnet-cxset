@@ -15,12 +15,13 @@
     <Version>1.3.0</Version>
     <Authors>John Sedlak</Authors>
     <Description>A .NET CLI tool for managing versions and changelogs across multiple projects in a repository.</Description>
-    <PackageProjectUrl>https://github.com/jsedlak/dotnet-changeset</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/jsedlak/dotnet-changeset</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jsedlak/dotnet-cxset</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jsedlak/dotnet-cxset</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>dotnet;tool;version;changelog;semver</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,6 +32,7 @@
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="logo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
